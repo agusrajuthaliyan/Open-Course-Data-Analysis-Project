@@ -1,0 +1,37 @@
+Program,Allotted Course,count
+B.A Economics,CO,18
+B.A Economics,HI,8
+B.A Economics,EN,2
+B.A English,SO,13
+B.A English,ZO,7
+B.A English,PE,6
+B.A Hindi,EN,8
+B.A Hindi,SO,4
+B.A Hindi,ZO,4
+B.A History,EC,15
+B.A History,SO,8
+B.A History,EN,5
+B.A Sociology,HI,12
+B.A Sociology,PE,8
+B.A Sociology,EC,5
+B.Com Model I,ST,11
+B.Com Model I,EC,10
+B.Com Model I,EN,7
+B.Sc Botany,CH,14
+B.Sc Botany,ZO,10
+B.Sc Botany,PH,2
+B.Sc Chemistry,MA,13
+B.Sc Chemistry,HI,5
+B.Sc Chemistry,PH,2
+B.Sc Mathematics,ST,10
+B.Sc Mathematics,CO,8
+B.Sc Mathematics,EN,2
+B.Sc Physics,CO,10
+B.Sc Physics,ST,5
+B.Sc Physics,MA,2
+B.Sc Statistics,MA,13
+B.Sc Statistics,CO,8
+B.Sc Statistics,PE,6
+B.Sc Zoology,CH,12
+B.Sc Zoology,PH,9
+B.Sc Zoology,BO,6

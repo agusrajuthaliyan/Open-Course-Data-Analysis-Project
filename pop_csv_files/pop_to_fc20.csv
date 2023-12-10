@@ -1,0 +1,40 @@
+FC,Program,count
+BO,B.A Hindi,3
+BO,B.A History,2
+BO,B.Sc Chemistry,1
+CH,B.Sc Zoology,11
+CH,B.Sc Botany,2
+CH,B.A English,1
+CO,B.Sc Mathematics,14
+CO,B.A Economics,11
+CO,B.Sc Statistics,9
+EC,B.A Sociology,9
+EC,B.Com Model I,9
+EC,B.A Hindi,4
+EN,B.A Economics,7
+EN,B.A History,3
+EN,B.Sc Chemistry,3
+HI,B.A Sociology,13
+HI,B.A Hindi,8
+HI,B.Sc Zoology,7
+HN,B.Sc Chemistry,2
+HN,B.Sc Physics,2
+HN,B.A History,1
+MA,B.Sc Chemistry,14
+MA,B.Sc Physics,9
+MA,B.Sc Statistics,9
+PE,B.A History,15
+PE,B.A English,12
+PE,B.A Sociology,12
+PH,B.Sc Zoology,5
+PH,B.Sc Chemistry,2
+PH,B.A English,1
+SO,B.A History,17
+SO,B.A Economics,10
+SO,B.A English,8
+ST,B.Com Model I,27
+ST,B.A Economics,11
+ST,B.Sc Mathematics,7
+ZO,B.Sc Botany,8
+ZO,B.Sc Chemistry,3
+ZO,B.A English,1
