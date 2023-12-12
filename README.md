@@ -207,13 +207,13 @@ From the above Table we can observe the following:
 
 
   ### Count of Students in the Parent Department
-  ![Image](Charts\Pie-chart\Students-Distribution.png) \
+  ![Image](Charts\Pie-chart\Students-Distribution.png)   
 *fig 1.0. showing the count of students in various departments.*
 - The department with the most students are in B.Com Model I followed by B.A. History
 
 ![image](Charts\Bar-plots\Mean-GP-Dept-Bargraph.png)
 
-![Popular Choices of Students](Charts\Bar-plots\Pop-choices-both.png) \
+![Popular Choices of Students](Charts\Bar-plots\Pop-choices-both.png)  
 *fig 2.0. showing the Total Count of Top 3 Choices received to Open Course Subjects.*
 
 ### **5. K-Means Clustering**
