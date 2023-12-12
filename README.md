@@ -12,7 +12,6 @@
 4. [Exploratory Data Analysis [EDA]](#4-exploratory-data-analysis-eda)
 5. [K Means Clustering](#5-k-means-clustering)
 6. [Multinomial Logistic Regression](#6-multinomial-logistic-regression)
-***
 
 ### **1. PROJECT BACKGROUND**
 
@@ -24,8 +23,8 @@ In the fifth semester, students across 12 departments gets to enroll in a course
 The data was collected by the Department of Statistics. The mode of collection of data was facilitated by using [Google Forms](https://docs.google.com/forms/u/0/ "See Online💡") which the students had to fill in. Data from the year 2019 & 2020 were used conveniently for comparison purposes. The data collected was then made to undergo a few transformations and some basic cleaning in [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel "See Online💡")
 
 #### **2.1. Data Files :**
-1. **[Allotment-Data-2019.xlsx](Data/Allotment-Data-2019.xlsx)**      
-2. **[Allotment-Data-2020.xlsx](Data/Allotment-Data-2020.xlsx)**
+1. **[Allotment-Data-2019.xlsx](Data/Allotment-Data-2019.xlsx "Download")**      
+2. **[Allotment-Data-2020.xlsx](Data/Allotment-Data-2020.xlsx "Download")**
 
 #### **2.2. Data Info :**
 
@@ -40,9 +39,10 @@ The data was collected by the Department of Statistics. The mode of collection o
   - **ID** : The unique ID of the students.
   - **gp** : Gross Percentage score of students, it is calculated by taking the average scores of first two semesters.
   
- $
+ $$
 gp = \frac{Sem \space I \space Score + Sem \space II \space Score}{Total \space Marks}
-$
+$$
+
     
   - **FC**  : First choice
   - **SC** : Second choice
@@ -226,7 +226,7 @@ From the above Table we can observe the following:
 
 
 
-### **Boxplots - GP Scores [2019-2020]**
+### **Boxplots - GP Scores (2019-2020)**
 ![Image](Charts/Box-plots/GP-Boxplot.png)
 *fig. 2.2. shows the boxplots of GP scores in both years*
 - It can be observed that, even though there have been a general increase in the average GP scores of departments, [outliers](https://mathworld.wolfram.com/Outlier.html "See Definition!") have also had a significant increase in the year 2020 as compared to 2019.
@@ -234,21 +234,21 @@ From the above Table we can observe the following:
 ***
 
 
-### **Lineplot of GP Scores [2019-2020]**
+### **Lineplot of GP Scores (2019-2020)**
 ![image](Charts/Line-plots/GP-lineplot.png)
 *fig. 2.3. shows the line plot of departments*
 - The general increase in trend as verified from the other plots have also been observed here. 
 ***
 
 
-### **Probability Distribution Plot - GP Scores [2019-2020]**
+### **Probability Distribution Plot - GP Scores (2019-2020)**
 ![Image](Charts/Hist-plots/GP-Distplot.png)
 *fig. 2.4. shows the layered [probability density plot](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-continuous/v/probability-density-functions) of GP scores in both years*
 - There is a general trend pointing that there has been an increase in the GP scores of departments.
 ***
 
 
-### **Top Popular Open Course Subjects [2019-2020]**
+### **Top Popular Open Course Subjects (2019-2020)**
 
 ![Popular Choices of Students](Charts/Bar-plots/Pop-choices-both.png)  
 *fig 3.0. showing the Total Count of Top 3 Choices received to each Open Course Subjects.*
@@ -257,8 +257,9 @@ From the above Table we can observe the following:
 ***
 
 
-### **Top Choice Allotted Proportion [2019-2020]**
-![FA-FC](Charts/Bar-plots/FA-FC-ALlot-Prop.png)
+### **Top Choice Allotted Proportion (2019-2020)**
+
+![Chart](Charts/Bar-plots/FA-FC-ALlot-Prop.png)
 *fig 4.0. shows the proportion of students being allotted to the first choice*
 - We can observe that on both years, nearly 80% of students were usually admitted to the first choice that they preferred.
 ***
