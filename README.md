@@ -213,7 +213,8 @@ From the above Table we can observe the following:
 - The department with the least students is **B.A. Hindi** in 2019 and **B.Sc. Botany** in 2020.
 
 ***
-  ### **Average Department-Wise GP [2019-2020]**
+
+### **Average Department-Wise GP [2019-2020]**
 ![image](Charts/Bar-plots/Mean-GP-Dept-Bargraph.png)
 *fig 2.0. shows the department-wise average GP scores of students.*
 - In the year 2019, **B.Sc. Mathematics** had the highest average GP scores followed by **B.Sc. Chemistry** and **B.Sc. Statistics**, while the least GP scores obtained was by **B.A. Sociology**.
@@ -221,7 +222,7 @@ From the above Table we can observe the following:
 
 ***
 
-  ### **Change in GP Score from (2019 - 2020)**
+### **Change in GP Score from (2019 - 2020)**
   ![image](Charts/Bar-plots/GP-Change-Bar.png)
   *fig 2.1. showing the change in the average GP score of departments as observed from 2019 to 2020.*
   - The arts subjects namely **B.A. Sociology** (+23%), **B.A. Hindi** (+21%) and **B.A. Economics** (+18%) had a great deal of improvement.
