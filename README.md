@@ -200,21 +200,75 @@ From the above Table we can observe the following:
 
 *Table 2.0.  Table depicting the Top Choice and the Top Allotted Course of each parent department on both years.* 
 - The science departments have been mostly admitted to the course of their choice.
-- For the art departments, it is less likely to be elected to the course of their choice.
+- For students in the art departments, it is less likely that they get elected to the course of their choice.
 
 ***
 
 
 
-  ### Count of Students in the Parent Department
+  ### **Distribution of Students in Parent Departments [2019-2020]**
   ![Image](Charts/Pie-chart/Students-Distribution.png)   
-*fig 1.0. showing the count of students in various departments.*
-- The department with the most students are in B.Com Model I followed by B.A. History
+*fig 1.0. showing the proportion and count of students in various departments.*
 
+- The department with the most students are in **B. Com Model I** on both 2019 and 2020.
+- The department with the least students is **B.A. Hindi** in 2019 and **B.Sc. Botany** in 2020.
+
+***
+  ### **Average Department-Wise GP [2019-2020]**
 ![image](Charts/Bar-plots/Mean-GP-Dept-Bargraph.png)
+*fig 2.0. shows the department-wise average GP scores of students.*
+- In the year 2019, **B.Sc. Mathematics** had the highest average GP scores followed by **B.Sc. Chemistry** and **B.Sc. Statistics**, while the least GP scores obtained was by **B.A. Sociology**.
+- In 2020, **B.Sc. Mathematics** had the highest GP closely followed by **B.Sc. Statistics** and **B.Sc. Chemistry**.
+
+
+***
+  ### **Change in GP Score from (2019 - 2020)**
+  ![image](Charts/Bar-plots/GP-Change-Bar.png)
+  *fig 2.1. showing the change in the average GP score of departments as observed from 2019 to 2020.*
+  - The arts subjects namely **B.A. Sociology** (+23%), **B.A. Hindi** (+21%) and **B.A. Economics** (+18%) had a great deal of improvement.
+  - While most departments saw an increase in the GP scores, the Departments **B.Sc. Botany** had a significant fall of nearly (-7%) followed by **B.Sc. Chemistry** (-1%).
+***
+
+
+
+### **Boxplots - GP Scores [2019-2020]**
+![Image](Charts/Box-plots/GP-Boxplot.png)
+*fig. 2.2. shows the boxplots of GP scores in both years*
+- It can be observed that, even though there have been a general increase in the average GP scores of departments, [outliers](https://mathworld.wolfram.com/Outlier.html "See Definition!") have also had a significant increase in the year 2020 as compared to 2019.
+- It is found out that most Science departments had outliers.
+***
+
+
+### **Lineplot of GP Scores [2019-2020]**
+![image](Charts/Line-plots/GP-lineplot.png)
+*fig. 2.3. shows the line plot of departments*
+- The general increase in trend as verified from the other plots have also been observed here. 
+***
+
+
+### **Probability Distribution Plot - GP Scores [2019-2020]**
+![Image](Charts/Hist-plots/GP-Distplot.png)
+*fig. 2.4. shows the layered [probability density plot](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-continuous/v/probability-density-functions) of GP scores in both years*
+- There is a general trend pointing that there has been an increase in the GP scores of departments.
+***
+
+
+### **Top Popular Open Course Subjects [2019-2020]**
 
 ![Popular Choices of Students](Charts/Bar-plots/Pop-choices-both.png)  
-*fig 2.0. showing the Total Count of Top 3 Choices received to Open Course Subjects.*
+*fig 3.0. showing the Total Count of Top 3 Choices received to each Open Course Subjects.*
+- On both years, It is evident that the open course subject of **Sociology** had the most demand followed by **Economics**.
+- While **Hindi** had received the least of interest from the students.
+***
+
+
+### **Top Choice Allotted Proportion [2019-2020]**
+![FA-FC](Charts\Bar-plots\FA-FC-ALlot-Prop.png)
+*fig 4.0. shows the proportion of students being allotted to the first choice*
+- We can observe that on both years, nearly 80% of students were usually admitted to the first choice that they preferred.
+***
+
+
 
 ### **5. K-Means Clustering**
 ### **6. Multinomial Logistic Regression**
