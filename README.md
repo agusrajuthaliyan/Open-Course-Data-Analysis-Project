@@ -10,7 +10,7 @@
 2. [About the Data](#2-about-the-data)
 3. [Project Summary](#3-project-summary) 
 4. [Exploratory Data Analysis [EDA]](#4-exploratory-data-analysis-eda)
-5. [K Means Clustering](#5-k-means-clustering)
+5. [K-Means Clustering](#5-k-means-clustering)
 6. [Multinomial Logistic Regression](#6-multinomial-logistic-regression)
 
 ### **1. PROJECT BACKGROUND**
@@ -20,7 +20,7 @@ In the fifth semester, students across 12 departments gets to enroll in a course
 ***
 ### **2. ABOUT THE DATA**
 
-The data was collected by the Department of Statistics. The mode of collection of data was facilitated by using [Google Forms](https://docs.google.com/forms/u/0/ "See Online💡") which the students had to fill in. Data from the year 2019 & 2020 were used conveniently for comparison purposes. The data collected was then made to undergo a few transformations and some basic cleaning in [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel "See Online💡")
+The data was collected by the Department of Statistics. The mode of collection of data was facilitated by using [Google Forms](https://docs.google.com/forms/u/0/ "See Online💡") which the students had to fill in. Data from the year 2019 & 2020 were used conveniently for comparison purposes. The data collected was then made to undergo a few transformations and some basic cleaning in [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel "See Online💡").
 
 #### **2.1. Data Files :**
 1. **[Allotment-Data-2019.xlsx](Data/Allotment-Data-2019.xlsx "Download")**      
@@ -88,9 +88,9 @@ $$
 ### **3. PROJECT SUMMARY**
   1. Nearly 75% to 80% of students got their first choice as their allotted department.
   2. There was a general increase in the average gp of the entire college from 2019 to 2020.
-  3. B.Sc. Botany and B.Sc. Chemistry were the only two programs that had a decrease in average GP scores.
+  3. **B.Sc. Botany** and **B.Sc. Chemistry** were the only two programs that had a decrease in average GP scores.
   4. Science subjects had a higher GP scores than arts subjects.
-  5. B.Sc. Mathematics has the highest sverage gp scores in both years.
+  5. **B.Sc. Mathematics** has the highest sverage gp scores in both years.
   6. There were six students in the year 2020 who were admitted to a course outside of their choice.
   7. Science students have better chances of being admitted to the course of their choice compared to arts students.
 
@@ -120,7 +120,7 @@ EDA is a very important step in a any data analysis project.
 
 *Table 1.0.  shows the department wise average Gross Percentage of students and the change from years 2019 and 2020.*
 From the above Table we can observe the following:
-1. The departments B.Sc. Botany and B.Sc. Chemistry were the only two departments to have a decrease in the average gp score.
+1. The departments **B.Sc. Botany** and **B.Sc. Chemistry** were the only two departments to have a decrease in the average gp score.
 2. Science departments have higher average scores than most arts courses.
 
 ***
@@ -205,7 +205,7 @@ From the above Table we can observe the following:
 
 
 
-  ### **Distribution of Students in Parent Departments [2019-2020]**
+### **Distribution of Students in Parent Departments [2019-2020]**
   ![Image](Charts/Pie-chart/Students-Distribution.png)   
 *fig 1.0. showing the proportion and count of students in various departments.*
 
@@ -244,7 +244,7 @@ From the above Table we can observe the following:
 ### **Lineplot of GP Scores (2019-2020)**
 ![image](Charts/Line-plots/GP-lineplot.png)
 *fig. 2.3. shows the line plot of departments*
-- The general increase in trend as verified from the other plots have also been observed here.
+- The general increase in GP score trend as verified from the other plots have also been observed here.
 
 ***
 
@@ -274,6 +274,82 @@ From the above Table we can observe the following:
 - We can observe that on both years, nearly 80% of students were usually admitted to the first choice that they preferred.
 
 ***
+
+### **Heatmap - Allotment Proportion of Parent Departments (2019-2020)**
+
+![Heatmap](Charts/Heatmaps/Parent-Allot-Heatmap.png)
+*fig 5.0. Heatmap showing the proportion of students from parent department to the allotted open course subjects*
+- The above [heatmap](https://www.hotjar.com/heatmaps/ "See Online💡") depicts a general trend where students in the art departments are allotted to another art departments and vice-versa for science departments.
+- There were less consolidation of students in 2020 as compared to that in the year 2019, As a result we are able to observe that students have been distributed ti different courses.
+
+***
+
+### **Heatmap - Change in Allotment Proportion of Parent Departments (2019-2020)**
+
+![Heatmap](Charts/Heatmaps/Parent-Allot-Change.png)
+*fig 5.1. Heatmap showing the proportion of students from parent department to the allotted open course subjects*
+- There was a significant increase in the students being admitted from **B.Sc. Mathematics** to **Commerce**, **B.Sc. Physics** to **Sociology** and to **Mathematics**.
+- There was a significant decrease in the students being admitted from **B.Sc. Physics** to **Commerce**, **B.Sc. Botany** to **B.Sc. Chemistry. [See Fig 5.1 for more]
+
+***
+
+### **Top Parent Department Allotments (2019-2020)**
+![Network Diagram](Charts/Network-plots/TOP-ALLOT-COURSE-NTQ.png)
+*fig 5.2. [Network Diagram](https://acqnotes.com/acqnote/tasks/network-diagram "See Online💡") showing the top course allotted by each parent department*
+- In the year 2019, **Statistics**, **Mathematics**, **Commerce** and **Chemistry** had students allotted from more than one departments.
+- In the year 2020, due to less consolidation only two courses had students being allotted from parent departments. As a result **Commerce** and **Mathematics** are the subjects with more than one departments.
+
+***
+
+### **Heatmap - Allotment Proportion in Open Course Subjects (2019-2020)**
+![Heatmap](Charts/Heatmaps/Target-Allot-Heatmaps.png)
+- The general trend observed is similar to that from *[fig 5.0](#heatmap---Allotment-proportion-of-parent-departments-2019-2020)* where students in arts subjects are mostly from art departments and vice-versa for science open course subjects.
+- **Economics** and **English** subjects had a healthy mix of students from multiple departments in both years.
+- **B.Sc Zoology** students have a significant proportion in Chemistry open courses in both years. Likewise, **B.Com Model I** students also has a great presence in **Statistics**.
+- **B.A. History** students have a notable presence in **Hindi** open courses in 2019 but not in 2020.
+
+***
+
+### **Heatmap - Change in Allotment Proportion in Open Course Subjects (2019-2020)**
+
+![Heatmap](Charts/Heatmaps/Target-Allot-Change-Heatmap.png)
+*fig 5.3. shows the change in allotment proportion trends in the open course subjects*
+- There was a steady increase in the **B.A. Economics** students being present in the **English** course (+31%) and **B.A. Hindi** students in **Botony** (+23%).
+- **Economics** saw a decrease in the students coming from **B.A. History**.
+
+***
+
+### **Top Open Course Allotments (2019-2020)**
+![Network Diagram](Charts/Network-plots/TOP-RECEIVED-Program-NTQ.png)
+*fig. 5.4. shows the top parent program received in the open course subjects*
+- Arts subjects contributed more to certain departments while the science students were spread equally across departments.
+- In 2019, **B.A. History**, **B.A. Sociology**, **B.Com. Model I**, **B.Sc. Botany** contributed to multiple departments.
+- In 2020, similarly **B.A. History** ,**B.A. Sociology**, **B.Com. Model I** and **B.A. Economics** contributed more to various departments.
+
+***
+
+### **Heatmap - First Choice (2019-2020)**
+![Heatmap](Charts/Heatmaps/FC-Heatmap.png)
+*fig. 5.5. shows the first choice proportion of students*
+- Yearly Consistency: The pattern of preference remains relatively consistent between 2019 and 2020.
+- On both years B.Sc. Zoology** students preferred **Chemistry**, similarly similar interest were also observed from **B.Sc. Chemistry** to **Mathematics** and from **B.Com Model I** to **Statistics**
+
+***
+
+### **Heatmap - Change in First Choice (2019-2020)**
+![Heatmp](Charts/Heatmaps/FC-Change-Prop_Heatmap.png)
+*fig. 5.6 shows the change in first choice proportions of students*
+- An increase in the interest of (+32%) from **B.Sc. Mathematics** to **Commerce** was observed. A similar interest was also observed from **B.Sc. History** to **Physical Education**.
+- A significant decrease of (-55%) was observed from **B.Sc. Botany** to **Chemistry**.
+
+***
+### **Top Choices (2019-2020)**
+![Network diagram](Charts/Network-plots/TOP-FC-NTQ.png)
+*fig. 5.7. showing the network diagram representing the top elective course prefered by departmeants*
+- In 2019, **Mathematics** and **Physical Education** was the top choices of students in nearly 3 parent departments.
+- In 2020 however **Commerce** was the only subject to have had the top choices of students. **Mathematics** and **History** were other course receiving high demands of choices.
+- On both years **Physics**, **Hindi**, **English** and **Hindi** were courses with little to no choice applications. 
+
 
 
 
