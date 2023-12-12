@@ -83,6 +83,7 @@ $$
   - **BO** : Course of **Botany**
   - **PH** : Course of **Physics**
   - **HN** : Course of **Hindi**
+
 ***
 ### **3. PROJECT SUMMARY**
   1. Nearly 75% to 80% of students got their first choice as their allotted department.
@@ -92,6 +93,7 @@ $$
   5. B.Sc. Mathematics has the highest sverage gp scores in both years.
   6. There were six students in the year 2020 who were admitted to a course outside of their choice.
   7. Science students have better chances of being admitted to the course of their choice compared to arts students.
+
 ***
 
 ### **4. EXPLORATORY DATA ANALYSIS [EDA]**
@@ -120,6 +122,7 @@ EDA is a very important step in a any data analysis project.
 From the above Table we can observe the following:
 1. The departments B.Sc. Botany and B.Sc. Chemistry were the only two departments to have a decrease in the average gp score.
 2. Science departments have higher average scores than most arts courses.
+
 ***
 
 
@@ -141,6 +144,7 @@ From the above Table we can observe the following:
 | B.Sc Zoology	   | 28.0	| 61.14	| 16.95	| 24.17	| 52.63	| 65.09	| 74.17	| 88.50 |
 
 *Table 1.1.  shows the department wise descriptive statistics of Gross Percentage in the year 2019.*
+
 ***
 ##### 4.1.2. GP Descriptive Stats 2020
 
@@ -215,13 +219,14 @@ From the above Table we can observe the following:
 - In the year 2019, **B.Sc. Mathematics** had the highest average GP scores followed by **B.Sc. Chemistry** and **B.Sc. Statistics**, while the least GP scores obtained was by **B.A. Sociology**.
 - In 2020, **B.Sc. Mathematics** had the highest GP closely followed by **B.Sc. Statistics** and **B.Sc. Chemistry**.
 
-
 ***
+
   ### **Change in GP Score from (2019 - 2020)**
   ![image](Charts/Bar-plots/GP-Change-Bar.png)
   *fig 2.1. showing the change in the average GP score of departments as observed from 2019 to 2020.*
   - The arts subjects namely **B.A. Sociology** (+23%), **B.A. Hindi** (+21%) and **B.A. Economics** (+18%) had a great deal of improvement.
   - While most departments saw an increase in the GP scores, the Departments **B.Sc. Botany** had a significant fall of nearly (-7%) followed by **B.Sc. Chemistry** (-1%).
+
 ***
 
 
@@ -231,13 +236,15 @@ From the above Table we can observe the following:
 *fig. 2.2. shows the boxplots of GP scores in both years*
 - It can be observed that, even though there have been a general increase in the average GP scores of departments, [outliers](https://mathworld.wolfram.com/Outlier.html "See Definition!") have also had a significant increase in the year 2020 as compared to 2019.
 - It is found out that most Science departments had outliers.
+
 ***
 
 
 ### **Lineplot of GP Scores (2019-2020)**
 ![image](Charts/Line-plots/GP-lineplot.png)
 *fig. 2.3. shows the line plot of departments*
-- The general increase in trend as verified from the other plots have also been observed here. 
+- The general increase in trend as verified from the other plots have also been observed here.
+
 ***
 
 
@@ -245,6 +252,7 @@ From the above Table we can observe the following:
 ![Image](Charts/Hist-plots/GP-Distplot.png)
 *fig. 2.4. shows the layered [probability density plot](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-continuous/v/probability-density-functions) of GP scores in both years*
 - There is a general trend pointing that there has been an increase in the GP scores of departments.
+
 ***
 
 
@@ -254,6 +262,7 @@ From the above Table we can observe the following:
 *fig 3.0. showing the Total Count of Top 3 Choices received to each Open Course Subjects.*
 - On both years, It is evident that the open course subject of **Sociology** had the most demand followed by **Economics**.
 - While **Hindi** had received the least of interest from the students.
+
 ***
 
 
@@ -262,6 +271,7 @@ From the above Table we can observe the following:
 ![Chart](Charts/Bar-plots/FA-FC-ALlot-Prop.png)
 *fig 4.0. shows the proportion of students being allotted to the first choice*
 - We can observe that on both years, nearly 80% of students were usually admitted to the first choice that they preferred.
+
 ***
 
 
