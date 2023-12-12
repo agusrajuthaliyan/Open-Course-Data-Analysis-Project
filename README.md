@@ -1,6 +1,6 @@
 # Open-Course-Elective-Choice-Trends-of-Students [2019-2020]
-***Data Source*** : Department of Statistics, [Mar Athanasius College of Arts and Science (Autonomous), Kothamangalam](https://macollege.in)
-***Language*** : Python
+***Data Source*** : Department of Statistics, [Mar Athanasius College of Arts and Science (Autonomous), Kothamangalam](https://macollege.in)    
+***Language*** : Python   
 ***Workflow*** : JupyterLab, Microsoft Excel
 
  **Certain columns with [Personally Identifiable Information [PII]](https://www.ibm.com/topics/pii "See Meaning💡") have been removed for privacy reasons.*
@@ -40,14 +40,9 @@ The data was collected by the Department of Statistics. The mode of collection o
   - **ID** : The unique ID of the students.
   - **gp** : Gross Percentage score of students, it is calculated by taking the average scores of first two semesters.
   
-
-``` math
-gp = (\text{Sem I Score} + \text{Sem II Score}) / \text{Total Score in Both}
-```
-
-```math
-  gp \space = \space {{Sem \space I \space Score + Sem \space II \space Score } \over Total \space Marks}
-  ```
+ $
+gp = \frac{Sem \space I \space Score + Sem \space II \space Score}{Total \space Marks}
+$
     
   - **FC**  : First choice
   - **SC** : Second choice
