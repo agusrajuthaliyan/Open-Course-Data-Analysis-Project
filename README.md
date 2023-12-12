@@ -263,7 +263,7 @@ From the above Table we can observe the following:
 
 
 ### **Top Choice Allotted Proportion [2019-2020]**
-![FA-FC](Charts\Bar-plots\FA-FC-ALlot-Prop.png)
+![FA-FC](Charts/Bar-plots/FA-FC-ALlot-Prop.png)
 *fig 4.0. shows the proportion of students being allotted to the first choice*
 - We can observe that on both years, nearly 80% of students were usually admitted to the first choice that they preferred.
 ***
