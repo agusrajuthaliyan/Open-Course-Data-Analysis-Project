@@ -5,20 +5,20 @@
 
  **Certain columns with [Personally Identifiable Information [PII]](https://www.ibm.com/topics/pii "See Meaning💡") have been removed for privacy reasons.*
  
-## TABLE OF CONTENTS :
-1. [Project Background](#1-project-background)
-2. [About the Data](#2-about-the-data)
+## TABLE OF CONTENTS : 📌
+1. [Project Background](#1-project-background) 
+2. [About the Data](#2-about-the-data) 
 3. [Project Summary](#3-project-summary) 
 4. [Exploratory Data Analysis [EDA]](#4-exploratory-data-analysis-eda)
 5. [K-Means Clustering](#5-k-means-clustering)
 6. [Multinomial Logistic Regression](#6-multinomial-logistic-regression)
 
-### **1. PROJECT BACKGROUND**
+### **1. PROJECT BACKGROUND** ❓
 
 In the fifth semester, students across 12 departments gets to enroll in a course, out of 13 options. The students are mandated to fill in a form. The form requires students to fill in their informations such as gross points from the first two semesters, choice fillings from first to sixth along with their unique id and parent department information. The students will be elected based on the priority of choices and gross percentage scores.
 
 ***
-### **2. ABOUT THE DATA**
+### **2. ABOUT THE DATA** 🧩
 
 The data was collected by the Department of Statistics. The mode of collection of data was facilitated by using [Google Forms](https://docs.google.com/forms/u/0/ "See Online💡") which the students had to fill in. Data from the year 2019 & 2020 were used conveniently for comparison purposes. The data collected was then made to undergo a few transformations and some basic cleaning in [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel "See Online💡").
 
@@ -85,7 +85,7 @@ $$
   - **HN** : Course of **Hindi**
 
 ***
-### **3. PROJECT SUMMARY**
+### **3. PROJECT SUMMARY** 🏆
   1. Nearly 75% to 80% of students got their first choice as their allotted department.
   2. There was a general increase in the average gp of the entire college from 2019 to 2020.
   3. **B.Sc. Botany** and **B.Sc. Chemistry** were the only two programs that had a decrease in average GP scores.
@@ -93,10 +93,11 @@ $$
   5. **B.Sc. Mathematics** has the highest sverage gp scores in both years.
   6. There were six students in the year 2020 who were admitted to a course outside of their choice.
   7. Science students have better chances of being admitted to the course of their choice compared to arts students.
+  8. Even though science departments had the highest marks in both years, the highest improvement in GP scores were observed in the art departments.
 
 ***
 
-### **4. EXPLORATORY DATA ANALYSIS [EDA]**
+### **4. EXPLORATORY DATA ANALYSIS [EDA]** 💡
 
 EDA is a very important step in a any data analysis project.
 
@@ -235,7 +236,7 @@ From the above Table we can observe the following:
 ### **Boxplots - GP Scores (2019-2020)**
 ![Image](Charts/Box-plots/GP-Boxplot.png)
 *fig. 2.2. shows the boxplots of GP scores in both years*
-- It can be observed that, even though there have been a general increase in the average GP scores of departments, [outliers](https://mathworld.wolfram.com/Outlier.html "See Definition!") have also had a significant increase in the year 2020 as compared to 2019.
+- It can be observed that, even though there have been a general increase in the average GP scores of departments, [outliers](https://mathworld.wolfram.com/Outlier.html "See Definition!💡") have also had a significant increase in the year 2020 as compared to 2019.
 - It is found out that most Science departments had outliers.
 
 ***
@@ -251,9 +252,9 @@ From the above Table we can observe the following:
 
 ### **Probability Distribution Plot - GP Scores (2019-2020)**
 ![Image](Charts/Hist-plots/GP-Distplot.png)
-*fig. 2.4. shows the layered [probability density plot](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-continuous/v/probability-density-functions) of GP scores in both years*
+*fig. 2.4. shows the layered [probability density plot](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-continuous/v/probability-density-functions "See Definition!💡") of GP scores in both years*
 - There is a general trend pointing that there has been an increase in the GP scores of departments.
-
+- There have been an increase in GP scores 
 ***
 
 
@@ -350,8 +351,124 @@ From the above Table we can observe the following:
 - In 2020 however **Commerce** was the only subject to have had the top choices of students. **Mathematics** and **History** were other course receiving high demands of choices.
 - On both years **Physics**, **Hindi**, **English** and **Hindi** were courses with little to no choice applications. 
 
+***
+
+### **5. K-Means Clustering** 💭
+
+[K-Means Clustering](https://www.javatpoint.com/k-means-clustering-algorithm-in-machine-learning "See Online💡") is a simple but effective unsupervised learning algorithm used to group data points into clusters. It is a centroid-based algorithm, meaning it identifies groups (clusters) by finding the centroids (centers) of the data points. It uses the [Euclidean Distance](https://www.britannica.com/science/Euclidean-distance "See definition💡") to cluster the points with the lowest distance.
+
+#### **Steps in K-Means Clustering :**
+1.  **Define the number of clusters** (k) :
+This is the most crucial step, as it determines the granularity of the clusters. The optimal number of clusters can be determined using various techniques, such as the [elbow method](https://www.geeksforgeeks.org/elbow-method-for-optimal-value-of-k-in-kmeans/ "See Definintion 💡") or [silhouette analysis](https://www.geeksforgeeks.org/silhouette-algorithm-to-determine-the-optimal-value-of-k/?ref=ml_lbp "See Online 💡"). For this project I have used elbow method to find the optimal no. of clusters.
+
+2. **Initialize the centroids** :
+The algorithm starts by randomly placing k centroids within the data space. These centroids represent the center of each cluster.
+
+3. **Assign data points to clusters** :
+Each data point is assigned to the closest centroid based on a distance metric, such as Euclidean distance.
+
+4. **Recalculate the centroids** :
+After all data points are assigned, the algorithm recalculates the centroids by taking the average of all data points within each cluster.
+
+5. **Repeat steps 3 and 4 until convergence** :
+The algorithm iterates between steps 3 and 4 until the centroids no longer move significantly. This indicates that the clusters have converged and are stable.
+
+***
+
+### **Allotment Clusters of Parent Department (2019)**
+![Cluster Plot](Charts/Cluster-plots/par-cluster-allot-20.png)
+*fig 6.0 a. : uses the elbow method to find the optimal no. of clusters (here 3).*   
+
+- The no. of cluster count taken here is 3 (as there was a steep elbow like structure observed at the x-axis at 3)
+
+*fig 6.0 b. : Shows the cluster plot of parent departments visualized using [PCA](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4792409/ "See Definition! 💡") using a custom plot* 
+
+- The cluster plot [fig 6.0b.] has been visualized using [Principle Component Axis (PCA)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4792409/ "See Definition!💡") as there were more than 2 features used in clustering of the above plot.
+- PCA is a dimensionality reduction technique.
+- I used a custom plot similar to [fviz_cluster](https://www.rdocumentation.org/packages/factoextra/versions/1.0.7/topics/fviz_cluster "See Reference!💡") in R Programming to obtain similar result.
+
+*fig 6.0 c. : shows the average mean of each clusters against their behaviours in the respective open course subjects*
+
+- This plot shows the behaviour of the parent department clusters on the allotted open course subjects.
+
+#### **Insights :**
+- The clusters indicate similar allotment behaviours in science and art departments, this made the science departments to cluster together and the art departments to cluster together as well.
+- The clusters in fig 6.0 b. validates the statement that the science students were usually admitted to other science departments and likewise for art departments. This is explained when comparing it with fig 6.0c. showing the average effect of the course allotment behaviours towards the open course subjects.
+- The <span style="color: orange;">**cluster 1 [Orange]**</span> containing **B.Sc. Botany** and **B.Sc. Zoology** were clustered together because of the reason that they both had been collectively admitted to courses such as **Chemistry**, **Physics** and **Zoology**. [See fig 6.0 c.].
+- Similarly <span style="color: dodgerblue;">**cluster 0 [Blue]**</span> and <span style="color: green;">**cluster 2 [Green]**</span> exhibitted similar behaviours to have been clustered together.
+
+***
+
+### **Allotment Clusters of Parent Department (2020)**
+![Cluster Plot](Charts/Cluster-plots/par-cluster-allot-20.png)
+*fig 6.1a, b & c showing the elbow method, cluster plot and the multiple bar plot of parent departmet allotment behaviours*
+
+#### **Insights :**
+
+- Students in the art departments have been more spread into various departments than the science as the science students were mostly admitted to other science courses.
+- The optimal cluster size here is 3 as from the first figure.
+- As compared to the previous parent department clusters, the distance between the departments seems to be spread apart, indicating there have been a great deal of change in the allotment behaviours of parent departments in the year 2020.
+- The <span style="color: green;">**cluster 2 [Green]**</span> containing math based departments have been clustered because they were allotted primarily to **Commerce**.
+- The <span style="color: orange;">**cluster 1 [Orange]**</span> containing science departments of **B.Sc. Botany**, **B.Sc. Chemistry** and **B.Sc. Physics** have been clustered together because they have been mostly allotted to **Mathematics** and **Zoology**. 
+- The <span style="color: dodgerblue;">**cluster 0 [Blue]**</span> seem to consist mostly of art departments, these were clustered together because they were spread across different departments in a similar way. 
+
+***
+
+### **Allotment Clusters of Open Course Subjects (2019)**
+![cluster plots](Charts/Cluster-plots/tar-cluster-allot-19.png)
+*fig 6.2 a, b & c showing the allotment behaviours experienced by the open course subjects in the year 2019*
+
+#### **Insights :**
+
+- Even through the suggested cluster size here is 3 as observed from the scree plot, we have opted to use 4 clusters because 4 clusters represents the subject clusters better.
+- <span style="color: dodgerblue;">**Cluster 0 [Blue]**</span> contains the subjects namely **Commerce** and **Mathematics**. The clustering of these departments can be explained by the collective allocation of students from **B.Sc. Statistics**, **B.A. Economics** and **B.Sc. Chemistry**.
+- <span style="color: orange;">**Cluster 1 [Orange]**</span> has been clustered together because of the reason that students from the **B.A. History** department had been allocated to these courses, followed by the students from **B.Com Model I** and **B.A. English**.
+- <span style="color: green;">**Cluster 2 [Green]**</span> having the subjects **Zoology**, **Physics** and **Chemistry** had been clustered since these courses saw a great deal of students from Biology based departments such as **B.Sc. Botany** and **B.Sc. Zoology**.
+- <span style="color: indianred;">**Cluster 3 [Red]**</span> had a mix of varied course subjects such as **Statistics**, **Physical Education**, **History** and **Botany**. These were grouped together because these subjects had most students from **B.Com Model I**,  **B.A. Sociology** and a few other departments from both the science and arts domains.
+
+***
+
+### **Allotment Clusters of Open Course Subjects (2020)**
+![Cluster Plot](Charts/Cluster-plots/tar-cluster-allot-20.png)
+*fig 6.3 a, b & c showing the allotment behaviours experienced by the open course subject in the year 2020*
+
+#### **Insights :**
+
+- The optimal no. of clusters were found to be 4 from the scree plot.
+- The clusters has had a great deal of difference in the allotment behaviours when compared with that of 2019.
+- <span style="color: dodgerblue;">**Cluster 0 [Blue]**</span> contains a mix of mostly art departments clustered as a result of the consolidated students being allotted from other art deprtments from the same domain as from the cluster.
+- <span style="color: orange;">**Cluster 1 [Orange]**</span> were of the subjects **Chemistry**, **Physics** and **History** these were clustered since most students in these courses were from **B.Sc. Zoology** followed by a few other art departments.
+- <span style="color: green;">**Cluster 2 [Green]**</span> had subjects such as **Zoology**, **Mathematics** and **Botany**. These were clustered for a few reasons.
+   - Students from **B.Sc. Chemistry** were a common factor being alloted to these departments.
+   - These courses saw the immigration of students from other departments in the parent department in the same cluster. Eg: students from **B.Sc. Botany** had a good presence in the **Zoology** course, vice-versa for **BSc. Zoology** and **B.Sc. Chemistry** departments.
+- <span style="color: indianred;">**Cluster 3 [Red]**</span> being **Economics** and **Statistics** subjects were clustered together as there was a strong allotment behaviour to these courses from **B.Com Model I** (See fig 6.3c.).
+
+***
+
+### **Parent Department Clusters of First Choice (2019)**
+![Cluster Plot](Charts/Cluster-plots/FC-19-Cluster.png)
+*fig 6.4 a, b & c showing the scree plot, cluster plot and the multiple barplot of cluster formation.*
+
+#### **Insights :**
+
+- The optimal cluster size is found out to be 3 from the scree plot in fig 6.4a.
+- <span style="color: dodgerblue;">**Cluster 0 [Blue]**</span> mostly contains art departments with a few exceptions like **B.Sc. Physics**, **B.Sc. Mathematics** and **B.Com Model I**. Students in these departments had an similar interest in applying for courses such as **Statistics**, **Economics**, **Sociology** and a few other courses.
+- <span style="color: orange;">**Cluster 1 [Orange]**</span> shows that students in the departments of **B.Sc. Statistics** and **B.Sc. Chemistry** had a significant similarity in the first choice interests. This can be explained due to their common interest towards the **Chemmistry** open course (See fig. 6.4c.).
+- <span style="color: green;">**Cluster 2 [Green]**</span> being the departments of **B.Sc. Botany** and **B.Sc. Zoology** had a very similar first choice behaviour, This can be explained due to the common interest towards the **Chemistry** course.
+
+***
+
+### **Parent Department Clusters of First Choice (2020)**
+![Cluster Plot](Charts/Cluster-plots/FC-20-Cluster.png)
+*fig 6.5a, b & c showing the scree plot, cluster plot and the multiple barplot of cluster formation.*
+
+#### **Insights :**
+- The optimal cluster size is found out to be 3 from the scree plot in fig. 6.5a.
+- There have been a significant change in the first choices of students in 2020 as compared to 2019. We are able to see a whole new set of clustered plots in the year 2020.
+- The year 2020 had less to do with science students choosing other science courses and arts students choosing other art courses. This is rather a good thing to observe since the whole point of open course is to get to learn new things.
+- <span style="color: dodgerblue;">**Cluster 0 [Blue]**</span> contains science departments but this time it is very spaced from each other. Students in these departments had a very strong interest towards the subject **Mathematics** which in-turn made them into a single cluster.
+- <span style="color: orange;">**Cluster 1 [Orange]**</span> contains mostly art departments being clustered together for having a common interest for the open course subjects **Physical Education**, **History** and **Sociology**.
+- <span style="color: green;">**Cluster 2 [Green]**</span> has managent related clusters of parent departments having a particular interest in the **Statistics** and **Commerce** open course subjects.
 
 
-
-### **5. K-Means Clustering**
-### **6. Multinomial Logistic Regression**
+### **6. Multinomial Logistic Regression** 🎯
