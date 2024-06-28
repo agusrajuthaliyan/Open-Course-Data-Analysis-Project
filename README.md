@@ -23,8 +23,8 @@ In the fifth semester, students across 12 departments gets to enroll in a course
 The data was collected by the Department of Statistics. The mode of collection of data was facilitated by using [Google Forms](https://docs.google.com/forms/u/0/ "See Online💡") which the students had to fill in. Data from the year 2019 & 2020 were used conveniently for comparison purposes. The data collected was then made to undergo a few transformations and some basic cleaning in [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel "See Online💡").
 
 #### **2.1. Data Files :**
-1. **[Allotment-Data-2019.xlsx](Data/Allotment-Data-2019.xlsx "Download")**      
-2. **[Allotment-Data-2020.xlsx](Data/Allotment-Data-2020.xlsx "Download")**
+1. **[Allotment-Data-2019.xlsx](Data/Allotment-Data-2019.xlsx "Download⬇️")**      
+2. **[Allotment-Data-2020.xlsx](Data/Allotment-Data-2020.xlsx "Download⬇️")**
 
 #### **2.2. Data Info :**
 
@@ -254,7 +254,8 @@ From the above Table we can observe the following:
 ![Image](Charts/Hist-plots/GP-Distplot.png)
 *fig. 2.4. shows the layered [probability density plot](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-continuous/v/probability-density-functions "See Definition!💡") of GP scores in both years*
 - There is a general trend pointing that there has been an increase in the GP scores of departments.
-- There have been an increase in GP scores 
+- There have been an increase in GP scores.
+
 ***
 
 
@@ -472,3 +473,127 @@ The algorithm iterates between steps 3 and 4 until the centroids no longer move 
 
 
 ### **6. Multinomial Logistic Regression** 🎯
+
+[Multinomial Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html "See Reference! 💡") is an extension of the binary logistic regression to handle multiple classes. It is a classification algorithm that is particularly useful when the target variable has more than two categories. Multinomial Logistic Regression extends logistic regression to predict outcomes with more than two categories. It models the probability of each category relative to one reference category.
+
+#### Introduction
+In this project, we employed a multinomial logistic regression model to predict the allotted courses for students based on their numerical and categorical attributes. We trained the model on the 2019 dataset and subsequently tested it on both the 2019 and 2020 datasets to evaluate its performance and generalizability.
+
+#### Methodology
+The dataset includes various features, with one numerical column and several categorical columns. The target variable is the 'Allotted Course'. The categorical features were one-hot encoded to convert them into a numerical format suitable for the logistic regression model.
+
+#### Steps involved were: 
+- Data Preparation: Splitting the dataset into features (X) and target (y).
+- Encoding: One-hot encoding categorical variables.
+- Model Training: Training a multinomial logistic regression model using the 2019 training data.
+- Model Evaluation: Testing the model on the 2019 and 2020 test data and evaluating its performance.
+
+#### Results and Interpretation
+
+##### 2019 Results
+###### Confusion Matrix:
+The confusion matrix for the 2019 test data shows how well the model predicted each class. Each row represents the actual class, and each column represents the predicted class. Diagonal values indicate correct predictions, while off-diagonal values indicate misclassifications.
+
+#### Classification Report:
+The classification report provides precision, recall, and F1-score for each class:
+
+- **Precision**: The ratio of correctly predicted positive observations to the total predicted positives.
+- **Recall**: The ratio of correctly predicted positive observations to the all observations in the actual class.
+- **F1-Score**: The weighted average of Precision and Recall.
+
+
+#### **CODE :**
+```python
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.linear_model import LogisticRegression
+import sklearn.metrics as metrics
+from joblib import dump,load
+
+# Split into X and y
+numerical_column = df1.iloc[:, 2]  # Select the numerical column
+categorical_columns = df1.iloc[:, 3:9]  # Select the categorical columns
+
+# Combine numerical and categorical columns
+X = pd.concat([numerical_column, categorical_columns], axis=1)
+y = df1['Allotted Course']
+
+# One-hot encode the categorical variables
+encoder = OneHotEncoder(handle_unknown='ignore', sparse_output=False)
+X_encoded = pd.DataFrame(encoder.fit_transform(X))
+X_encoded.columns = encoder.get_feature_names_out(X.columns)
+
+# Split into train and test sets
+X_train, X_test, y_train, y_test = train_test_split(X_encoded, y, test_size=0.2, random_state=42)
+
+# Fit the model
+model = LogisticRegression(multi_class='multinomial', solver='lbfgs')
+model.fit(X_train, y_train)
+
+# Save the trained model
+dump(model, 'Model/MNLogReg.joblib')
+```
+
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+          BO       1.00      0.25      0.40         4
+          CH       0.75      1.00      0.86         6
+          CO       0.78      1.00      0.88         7
+          EC       0.80      1.00      0.89         4
+          EN       0.88      0.88      0.88         8
+          HI       0.80      1.00      0.89         4
+          HN       1.00      0.00      0.00         2
+          MA       1.00      0.75      0.86         8
+          ...
+    weighted avg   0.86      0.82      0.80        74
+
+#### Overall Metrics (2019):
+- **Accuracy score** : 82.43 %
+- **Log loss** : 75.74 %
+
+### 2020 Results:
+
+#### Confusion Matrix:
+
+
+It appears that there might be some additional confusion matrix entries cut off in the display. Nevertheless, let's interpret the available information:
+
+2020 Results:
+Confusion Matrix:
+
+Classification Report:
+
+                precision    recall  f1-score   support
+
+          BO       0.80      0.40      0.53        10
+          CH       0.67      0.67      0.67         3
+          CO       1.00      0.91      0.95        11
+          EC       1.00      1.00      1.00         6
+          EN       0.75      0.60      0.67         5
+          HI       0.83      0.91      0.87        11
+          HN       1.00      0.50      0.67         4
+          MA       0.40      1.00      0.57         4
+          ...
+    weighted avg   0.81      0.75      0.74        83
+
+#### Overall Matrix:
+- **Accuracy score**: 74.7
+- **Log loss**: 1.0062
+
+#### Interpretation
+- The model's accuracy on the 2020 dataset was approximately 74.7%, which is slightly lower than the 2019 accuracy.
+- Similar to 2019, classes like 'CO' and 'EC' showed strong performance with high precision, recall, and F1-scores.
+- Some classes like 'BO' had a noticeable drop in performance, with precision and recall indicating potential issues in correctly predicting these classes.
+- The increase in log loss to 1.0062 suggests higher predictive uncertainty in the 2020 dataset compared to 2019.
+
+#### Conclusion:
+The multinomial logistic regression model demonstrated reasonable accuracy and performance in predicting course allotments for both 2019 and 2020 datasets. However, there are discrepancies in performance across different classes, with some classes consistently showing high predictive power and others indicating potential areas for model improvement. The results suggest that while the model generalizes well, there is room for refinement, particularly in addressing the variability and potential changes in the underlying data between years. 
+
+
+
+
+
+
