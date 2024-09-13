@@ -558,9 +558,6 @@ Classification Report:
 
 #### Confusion Matrix:
 
-
-It appears that there might be some additional confusion matrix entries cut off in the display. Nevertheless, let's interpret the available information:
-
 2020 Results:
 Confusion Matrix:
 
