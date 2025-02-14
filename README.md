@@ -291,7 +291,7 @@ From the above Table we can observe the following:
 ![Heatmap](Charts/Heatmaps/Parent-Allot-Change.png)
 *fig 5.1. Heatmap showing the proportion of students from parent department to the allotted open course subjects*
 - There was a significant increase in the students being admitted from **B.Sc. Mathematics** to **Commerce**, **B.Sc. Physics** to **Sociology** and to **Mathematics**.
-- There was a significant decrease in the students being admitted from **B.Sc. Physics** to **Commerce**, **B.Sc. Botany** to **B.Sc. Chemistry. [See Fig 5.1 for more]
+- There was a significant decrease in the students being admitted from **B.Sc. Physics** to **Commerce**, **B.Sc. Botany** to **B.Sc. Chemistry**. [See Fig 5.1 for more]
 
 ***
 
@@ -334,7 +334,7 @@ From the above Table we can observe the following:
 ![Heatmap](Charts/Heatmaps/FC-Heatmap.png)
 *fig. 5.5. shows the first choice proportion of students*
 - Yearly Consistency: The pattern of preference remains relatively consistent between 2019 and 2020.
-- On both years B.Sc. Zoology** students preferred **Chemistry**, similarly similar interest were also observed from **B.Sc. Chemistry** to **Mathematics** and from **B.Com Model I** to **Statistics**
+- On both years **B.Sc. Zoology** students preferred **Chemistry**, similarly similar interest were also observed from **B.Sc. Chemistry** to **Mathematics** and from **B.Com Model I** to **Statistics**
 
 ***
 
@@ -483,10 +483,10 @@ In this project, we employed a multinomial logistic regression model to predict 
 The dataset includes various features, with one numerical column and several categorical columns. The target variable is the 'Allotted Course'. The categorical features were one-hot encoded to convert them into a numerical format suitable for the logistic regression model.
 
 #### Steps involved were: 
-- Data Preparation: Splitting the dataset into features (X) and target (y).
-- Encoding: One-hot encoding categorical variables.
-- Model Training: Training a multinomial logistic regression model using the 2019 training data.
-- Model Evaluation: Testing the model on the 2019 and 2020 test data and evaluating its performance.
+- **Data Preparation**: Splitting the dataset into features (X) and target (y).
+- **Encoding**: One-hot encoding categorical variables.
+- **Model Training**: Training a multinomial logistic regression model using the 2019 training data.
+- **Model Evaluation**: Testing the model on the 2019 and 2020 test data and evaluating its performance.
 
 #### Results and Interpretation
 
